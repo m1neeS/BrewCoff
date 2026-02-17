@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-BrewHaven</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS dengan variabel -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Rounded" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+<body>
+    <!-- Overlay Background -->
+    <div class="fixed inset-0 bg-[var(--color-overlay)] bg-opacity-60 flex items-center justify-center">
+        
+        <!-- Modal Card -->
+        <div class="bg-[var(--color-bg-primary)] rounded-lg max-w-md w-full mx-4 overflow-hidden relative">
+        
+            <!-- Close Button -->
+            <button onclick="window.location.href='menu.html'" class="absolute top-4 right-4 z-10 bg-[var(--color-text-primary)] bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center">
+                <span class="material-icons-sharp text-white text-xl">close</span>
+            </button>
+
+            <!-- Product Image -->
+            <img class="w-full h-full object-cover" alt="Product Image" src="https://tse4.mm.bing.net/th/id/OIP.cfpEzN6TIVsKW-5pqK6n0QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+
+            <!-- Product Description -->
+            <div class="p-6 space-y-6">
+                <!-- Product Info -->
+                <h2 class="text-[var(--color-text-primary)] text-[var(--fs-heading-l)] font-[var(--fw-bold)]">
+                    Spanish Latte</h2>
+                
+                <p class="text-[var(--color-accent)] text-[18px] font-[var(--fw-semibold)] mt-1" >
+                    $5.50</p>
+
+                <p class="text-[var(--color-text-secondary)] text-[13px] leading-relaxed mt-1" >
+                    Rich espresso with condensed milk and textured foam. A sweet classic.</p>
+            </div>
+        
+        </div>
+
+    </div>
+    
+</body>
+</html>

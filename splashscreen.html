@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrewHaven</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS dengan variabel -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Rounded" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+<body class="bg-[var(--color-bg-primary)] min-h-screen flex items-center justify-center">
+    <div class="text-center max-w-md mx-auto px-4">
+        <div class="text-center">
+            <!-- Logo -->
+            <div class="w-[140px] h-[140px] bg-[var(--color-bg-tertiary)] rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.6)] flex items-center justify-center text-[var(--color-accent)] mx-auto mb-[var(--space-lg)]"><span class="material-icons-sharp" style="font-size: 48px;">coffee</span></div>
+            <!-- Heading -->
+            <h1 class="text-[28px] font-[var(--fw-bold)] text-[var(--color-text-primary)] mb-[8px]">
+            Brew <span class="text-[var(--color-accent)]">Haven</span>
+            </h1>
+            <p class="text-[13px] text-[var(--color-text-secondary)] uppercase tracking-[1px] mb-[32px]">
+            Premium Roastery
+            </p>
+            <div class="mb-[var(--space-sm)]">
+                <span class="inline-block bg-transparent border border-[var(--color-text-secondary)] rounded-[var(--radius-full)] px-[var(--space-lg)] py-[var(--space-sm)] text-[var(--fs-body-small)]">
+                    <span class="text-[var(--color-warning)] mr-[var(--space-sm)]">●</span>TABLE 05
+                </span>
+            </div>
+            <!-- Navigasi ke halaman menu -->
+            <div class="my-[var(--space-xl)]">
+                <a href="menu.html" class="inline-flex items-center justify-center gap-2 bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] text-[var(--color-bg-primary)] rounded-[var(--radius-full)] px-[var(--space-2xl)] py-[var(--space-md)] text-[var(--fs-body)] 
+                font-[var(--fw-semibold)] w-full no-underline transition-colors duration-300 cursor-pointer">
+                    <span class="material-icons-sharp text-[15px]">restaurant_menu</span>
+                    Lihat Menu
+                </a>
+            </div>
+            <!-- Caption -->
+            <div class="mt-[var(--space-xl)] text-[11px] text-[var(--color-text-secondary)] font-[var(--fw-medium)]">
+                FREE WIFI <span class="mx-2">•</span> OPEN 7AM – 9PM <br>
+                <small class="text-[10px]">Powered by KyroM1D</small>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

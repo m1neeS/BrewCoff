@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-BrewHaven</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS dengan variabel -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Rounded" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+<body class="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] min-h-screen">
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[var(--color-bg-primary)] border-b border-[var(--color-bg-tertiary)]">
+        <div class="flex items-center justify-between mx-auto px-6 py-4">
+            <!-- Logo -->
+            <a href="" class="flex items-center gap-2 text-[var(--color-text-primary)] text-[18px] font-[var(--fw-bold)] ">
+                <span class="material-icons-sharp text-[var(--color-accent)]" style="font-size: 48px;">coffee</span>
+                <span class="">Brew<span class="text-[var(--color-accent)]">Haven</span></span>
+            </a>
+            <!-- Search Bar -->
+            <div class="flex items-center bg-[var(--color-bg-secondary)] rounded-full px-4 py-3 w-full max-w-[500px] mx-6 gap-3">
+                <span class="text-[var(--color-text-secondary)] material-icons-sharp">search</span>
+                <input class="bg-transparent border-none outline-none w-full text-[14px] text-[var(--color-text-primary)]" type="text" placeholder="Search for latte, pastry, etc...">
+            </div>
+            <!-- Icons -->
+            <div class="flex items-center gap-4">
+                <button class="text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors">
+                    <span class="material-icons-sharp">notifications</span>
+                </button>
+                <div class="w-10 h-10 rounded-full bg-[var(--color-accent)] flex items-center justify-center text-[var(--color-bg-primary)] font-[var(--fw-bold)] cursor-pointer">
+                    <img alt="User Profile" class="rounded-full w-full h-full"src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPKrREOim2Xy56yExhVavrXQX-Z94hy-2OD_-5ru8lhKASktdgvvZlVuz99eKcW2Vx9jhzHlqyCWR2IUMD4czA3YEcehgDPlwSiDyeKOcqIk01bZy-zeJmXVne8Hrc-P2UKkyieCe0bsszZU1ng0FZeXMFQe8gv1BsgD9wDfpuJifmHY89kCtz8mSiCStmdKAZjCxL8HUHOaYUKTgJu_R6Ho7uaqey3RCHR_dT4l7RM1H5Vn31ZDXbvz-iDkrPxx-fNVHD7LLf0U5B"/>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-[80px] px-6 max-w-[1600px] mx-auto">
+        <!-- Banner -->
+        <section class="mt-6 mb-6 rounded-[20px] min-h-[280px] relative overflow-hidden">
+            <!-- Background Image -->
+            <img alt="Coffee promotion banner" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWtPhH48PBpikuz5ypU_a8GI7iWw78V035vU7UgMEpPcz1PYIASoAyvosyJ5Gwkjaz_MdXZ7b8AcIPq-J5VoKpAjIbzzSOV0D-1BHzBykTLh3AVG97iM6Y_SPCDkVmpFfITJ717_TOppGKnB7pdTQfmEwKDUM_uYKklHirvRnErRkWkuIieuM80we8sygVy8kn3mrxPUgYufoiIhjdkpuVOFY0tAaNXP5nz0bRFC8pvcJ-taTmgdXJ8Yebk3iGsWWWBJOrKx0etqnq"/>
+            <!-- Content Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-[#1A1612] to-[#C8956C] opacity-75"></div>
+            <div class="relative z-10 p-10 flex items-center justify-between">
+                <!-- Left Content -->
+                <div class="flex-1">
+                    <!-- Badge -->
+                    <span class="inline-block bg-[var(--color-overlay)] px-4 py-2 rounded-full text-[var(--fs-caption)] font-[var(--fw-medium)] uppercase mb-6 mt-6">
+                            Limited Offer
+                    </span>
+                    <!-- Heading -->
+                    <h1 class="text-[40px] font-[var(--fw-bold)] leading-tight mb-4 max-w-[450px]">
+                        Start Your Morning Right
+                    </h1>
+                    <!-- Description -->
+                    <p class="text-[var(--fs-body)] text-[var(--color-text-primary)] opacity-90 leading-relaxed mb-6 max-w-[450px]">
+                        Get 20% off on all signature lattes before 10 AM.<br>
+                        Experience the premium taste.
+                    </p>
+                    <!-- Button -->
+                    <button class="inline-flex items-center gap-2 bg-[var(--color-accent)] text-[var(--color-bg-primary)] px-8 py-4 rounded-full text-[var(--fs-body)] font-[var(--fw-semibold)] hover:bg-[var(--color-accent-hover)] transition-colors duration-300">
+                        Order Now
+                        <span class="material-icons-sharp">arrow_forward</span>
+                    </button>
+                </div>
+                <!-- Right Image -->
+                <div class="w-[25%] h-[25%] relative rounded-full">
+                    <img alt="Product" class="w-full h-full object-contain rounded-full" src="https://corkframes.com/cdn/shop/articles/Corkframes_Coffee_Guide_520x500_422ebe38-4cfa-42b5-a266-b9bfecabaf30.jpg?v=1734598727">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Category -->
+        <div class="flex gap-3 overflow-x-auto scrollbar-hide py-4 mb-6">
+            
+            <!-- Active Tab -->
+            <button class="bg-[var(--color-accent)] text-[var(--color-bg-primary)] px-6 py-3 rounded-full text-[14px] font-medium whitespace-nowrap transition-all duration-300">
+                All Menu
+            </button>
+            
+            <!-- Inactive Tabs -->
+            <button class="bg-transparent border border-[var(--color-text-secondary)] text-[var(--color-text-secondary)] px-6 py-3 rounded-full text-[14px] font-medium whitespace-nowrap hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-all duration-300">
+                Signature Coffee
+            </button>
+            
+            <button class="bg-transparent border border-[var(--color-text-secondary)] text-[var(--color-text-secondary)] px-6 py-3 rounded-full text-[14px] font-medium whitespace-nowrap hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-all duration-300">
+                Non-Coffee
+            </button>
+            
+            <button class="bg-transparent border border-[var(--color-text-secondary)] text-[var(--color-text-secondary)] px-6 py-3 rounded-full text-[14px] font-medium whitespace-nowrap hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-all duration-300">
+                Pastry
+            </button>
+            
+            <button class="bg-transparent border border-[var(--color-text-secondary)] text-[var(--color-text-secondary)] px-6 py-3 rounded-full text-[14px] font-medium whitespace-nowrap hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-all duration-300">
+                Food & Meals
+            </button>
+            
+            <button class="bg-transparent border border-[var(--color-text-secondary)] text-[var(--color-text-secondary)] px-6 py-3 rounded-full text-[14px] font-medium whitespace-nowrap hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-all duration-300">
+                Beans
+            </button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+            <!-- ===== PRODUCT CARD BEST SELLER ===== -->
+            <div class="bg-[var(--color-bg-secondary)] rounded-lg overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer">
+                
+                <!-- Image Section -->
+                <div class="relative h-[220px] w-full">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.cfpEzN6TIVsKW-5pqK6n0QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Spanish Latte" class="w-full h-full object-cover">
+                    
+                    <!-- Badge -->
+                    <span class="absolute top-3 left-3 bg-[var(--color-warning)] px-3 py-1 rounded-md text-[10px] font-bold uppercase text-white">
+                        Best Seller
+                    </span>
+                </div>
+                
+                <!-- Content Section -->
+                <div class="p-5">
+                    <h3 class="text-[18px] font-semibold text-[var(--color-text-primary)] mb-2 line-clamp-1">
+                        Spanish Latte
+                    </h3>
+                    <p class="text-[13px] text-[var(--color-text-secondary)] leading-relaxed mb-3 line-clamp-2">
+                        Rich espresso with condensed milk and textured foam. A sweet classic.
+                    </p>
+                    <p class="text-[18px] font-bold text-[var(--color-accent)]">
+                        $5.50
+                    </p>
+                    <button onclick="window.location.href='itemmenu.html'" class="mt-3 w-full bg-[var(--color-accent)] text-[var(--color-bg-primary)] px-4 py-2 rounded-full text-[14px] font-semibold hover:bg-[var(--color-accent-hover)] transition-colors duration-300">
+                        Add to Cart
+                    </button>
+                </div>
+                
+            </div>
+
+            <!-- ===== PRODUCT CARD NORMAL ===== -->
+            <div class="bg-[var(--color-bg-secondary)] rounded-lg overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer">
+                
+                <!-- Image Section -->
+                <div class="relative h-[220px] w-full">
+                    <img src="https://via.placeholder.com/300x220" alt="Butter Croissant" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Content Section -->
+                <div class="p-5">
+                    <h3 class="text-[18px] font-semibold text-[var(--color-text-primary)] mb-2 line-clamp-1">
+                        Butter Croissant
+                    </h3>
+                    <p class="text-[13px] text-[var(--color-text-secondary)] leading-relaxed mb-3 line-clamp-2">
+                        Freshly baked French pastry with layers of premium butter.
+                    </p>
+                    <p class="text-[18px] font-bold text-[var(--color-accent)]">
+                        $3.00
+                    </p>
+                </div>
+                
+            </div>
+
+            <!-- ===== PRODUCT CARD SOLD OUT ===== -->
+            <div class="bg-[var(--color-bg-secondary)] rounded-lg overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer">
+                
+                <!-- Image Section -->
+                <div class="relative h-[220px] w-full">
+                    <img src="https://via.placeholder.com/300x220" alt="Tuna Melt" class="w-full h-full object-cover grayscale">
+                    
+                    <!-- Sold Out Overlay -->
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+                        <span class="bg-[var(--color-bg-tertiary)] px-4 py-2 rounded-md text-[12px] font-bold uppercase text-[var(--color-text-primary)]">
+                            Sold Out
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Content Section -->
+                <div class="p-5 opacity-60">
+                    <h3 class="text-[18px] font-semibold text-[var(--color-text-primary)] mb-2 line-clamp-1">
+                        Tuna Melt
+                    </h3>
+                    <p class="text-[13px] text-[var(--color-text-secondary)] leading-relaxed mb-3 line-clamp-2">
+                        Grilled sourdough with tuna salad and melted cheddar cheese.
+                    </p>
+                    <p class="text-[18px] font-bold text-[var(--color-text-secondary)]">
+                        $6.00
+                    </p>
+                </div>
+                
+            </div>
+
+            <!-- ===== PRODUCT CARD NEW ===== -->
+            <div class="bg-[var(--color-bg-secondary)] rounded-lg overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer">
+                
+                <!-- Image Section -->
+                <div class="relative h-[220px] w-full">
+                    <img src="https://via.placeholder.com/300x220" alt="Ethiopia Yirgacheffe" class="w-full h-full object-cover">
+                    
+                    <!-- Badge -->
+                    <span class="absolute top-3 right-3 bg-blue-500 px-3 py-1 rounded-md text-[10px] font-bold uppercase text-white">
+                        New
+                    </span>
+                </div>
+                
+                <!-- Content Section -->
+                <div class="p-5">
+                    <h3 class="text-[18px] font-semibold text-[var(--color-text-primary)] mb-2 line-clamp-1">
+                        Ethiopia Yirgacheffe
+                    </h3>
+                    <p class="text-[13px] text-[var(--color-text-secondary)] leading-relaxed mb-3 line-clamp-2">
+                        Floral notes with hints of jasmine and lemon. Medium roast.
+                    </p>
+                    <p class="text-[18px] font-bold text-[var(--color-accent)]">
+                        $4.50
+                    </p>
+                </div>
+                
+            </div>
+
+            <!-- PRODUCT CARD NORMAL -->
+            <div class="bg-[var(--color-bg-secondary)] rounded-lg overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer">
+                
+                <!-- Image Section -->
+                <div class="relative h-[220px] w-full">
+                    <img src="https://via.placeholder.com/300x220" alt="Butter Croissant" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Content Section -->
+                <div class="p-5">
+                    <h3 class="text-[18px] font-semibold text-[var(--color-text-primary)] mb-2 line-clamp-1">
+                        Butter Croissant
+                    </h3>
+                    <p class="text-[13px] text-[var(--color-text-secondary)] leading-relaxed mb-3 line-clamp-2">
+                        Freshly baked French pastry with layers of premium butter.
+                    </p>
+                    <p class="text-[18px] font-bold text-[var(--color-accent)]">
+                        $3.00
+                    </p>
+                </div>
+                
+            </div>
+
+             <!-- PRODUCT CARD NORMAL -->
+             <div class="bg-[var(--color-bg-secondary)] rounded-lg overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer">
+                
+                <!-- Image Section -->
+                <div class="relative h-[220px] w-full">
+                    <img src="https://via.placeholder.com/300x220" alt="Butter Croissant" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Content Section -->
+                <div class="p-5">
+                    <h3 class="text-[18px] font-semibold text-[var(--color-text-primary)] mb-2 line-clamp-1">
+                        Butter Croissant
+                    </h3>
+                    <p class="text-[13px] text-[var(--color-text-secondary)] leading-relaxed mb-3 line-clamp-2">
+                        Freshly baked French pastry with layers of premium butter. </p>
+                    <p class="text-[18px] font-bold text-[var(--color-accent)]">
+                        $3.00 </p>
+                </div>
+            
+             </div>
+        </div>
+    </main>
+
+    <!-- ========== FLOATING CART BUTTON ========== -->
+    <button class="fixed bottom-6 right-6 z-50 bg-[var(--color-accent)] flex items-center gap-3 px-6 py-4 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.4)] hover:bg-[var(--color-accent-hover)] transition-all duration-300">
+        
+        <span class="material-icons-sharp text-[var(--color-bg-primary)]">shopping_bag</span>
+        
+        <div class="text-[var(--color-bg-primary)]">
+            <div class="text-[11px] font-medium">YOUR CART</div>
+            <div class="text-[16px] font-bold">$14.50</div>
+        </div>
+        
+        <span class="material-icons-sharp text-[var(--color-bg-primary)]">arrow_forward</span>
+        
+    </button>
+
+</body>
+</html>
