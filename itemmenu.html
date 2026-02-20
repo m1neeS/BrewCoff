@@ -17,7 +17,7 @@
     <div class="fixed inset-0 bg-[var(--color-overlay)] bg-opacity-60 flex items-center justify-center">
         
         <!-- Modal Card -->
-        <div class="bg-[var(--color-bg-primary)] rounded-lg max-w-md w-full mx-4 overflow-hidden relative">
+        <div class="bg-[var(--color-bg-primary)] rounded-lg max-w-md w-full mx-4 relative max-h-[90vh] overflow-y-auto scrollbar-hide">
         
             <!-- Close Button -->
             <button onclick="window.location.href='menu.html'" class="absolute top-4 right-4 z-10 bg-[var(--color-text-primary)] bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center">
@@ -28,18 +28,119 @@
             <img class="w-full h-full object-cover" alt="Product Image" src="https://tse4.mm.bing.net/th/id/OIP.cfpEzN6TIVsKW-5pqK6n0QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
 
             <!-- Product Description -->
-            <div class="p-6 space-y-6">
+            <div class="p-6 space y-6">
                 <!-- Product Info -->
-                <h2 class="text-[var(--color-text-primary)] text-[var(--fs-heading-l)] font-[var(--fw-bold)]">
+                <h2 class="text-[var(--color-text-primary)] text-[22px] font-[var(--fw-bold)]">
                     Spanish Latte</h2>
                 
-                <p class="text-[var(--color-accent)] text-[18px] font-[var(--fw-semibold)] mt-1" >
+                <p class="text-[var(--color-accent)] text-[18px] font-[var(--fw-semibold)] mt-1">
                     $5.50</p>
 
-                <p class="text-[var(--color-text-secondary)] text-[13px] leading-relaxed mt-1" >
+                <p class="text-[11px] text-[var(--color-text-secondary)] leading-relaxed mt-2" >
                     Rich espresso with condensed milk and textured foam. A sweet classic.</p>
             </div>
-        
+            
+            <!-- Divider -->
+            <div class="h-px bg-gradient-to-r from-transparent via-[var(--color-text-secondary)] to-transparent opacity-30"></div>
+
+            <!-- Temperature -->
+            <div class="p-6 space y-6">
+                <!-- Header -->
+                <div class="flex justify-between items-center my-sm">
+                    <span class="text-[18px] font-[var(--fw-medium)] text-[var(--color-text-primary)]">Temperature</span>
+                    <span class="text-[13px] font-[var(--fw-semibold)] text-[var(--color-danger)] bg-red-900 bg-opacity-20 px-2 py-1 rounded uppercase tracking-wide">Required</span>
+                </div>
+
+                <!-- Temperature Buttons -->
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="selectTemperature('hot', this)" 
+                    class="flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-[var(--color-bg-tertiary)] bg-opacity-50 border-2 border-transparent hover:border-[var(--color-accent)] transition-all duration-300">
+                    <span class="text-[22px]">🔥</span>
+                    <span class="text-[var(--color-text-primary)] font-[var(--fw-medium)]">Hot</span>
+                    </button>
+
+                    <button onclick="selectTemperature('Ice', this)" 
+                    class="flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-[var(--color-bg-tertiary)] bg-opacity-50 border-2 border-transparent hover:border-[var(--color-accent)] transition-all duration-300">
+                    <span class="text-[22px]">❄️</span>
+                    <span class="text-[var(--color-text-primary)] font-[var(--fw-medium)]">Ice</span>
+                    </button>
+                </div>
+
+                <!-- Milk Options -->
+                <div>
+                    <span class="text-[18px] font-[var(--fw-medium)] text-[var(--color-text-primary)] block my-sm">Milk Option</span>
+                    
+                    <!-- Regular Milk -->
+                    <label class="flex items-center justify-between p-4 rounded-lg bg-[var(--color-bg-tertiary)] bg-opacity-30 hover:bg-opacity-60 cursor-pointer mb-2 transition-all duration-300">
+                        <div class="flex items-center gap-3">
+                            <input 
+                                type="radio" 
+                                name="milk" 
+                                value="0" 
+                                onchange="updatePrice()"
+                                class="w-5 h-5 accent-[var(--color-accent)] cursor-pointer">
+                            <span class="text-[var(--color-text-primary)]">Regular Milk</span>
+                        </div>
+                    </label>
+
+                    <!-- Oat Milk -->
+                    <label class="flex items-center justify-between p-4 rounded-lg bg-[var(--color-bg-tertiary)] bg-opacity-30 hover:bg-opacity-60 cursor-pointer mb-2 transition-all duration-300">
+                        <div class="flex items-center gap-3">
+                            <input 
+                                type="radio" 
+                                name="milk" 
+                                value="8000" 
+                                checked 
+                                onchange="updatePrice()"
+                                class="w-5 h-5 accent-[var(--color-accent)] cursor-pointer">
+                            <span class="text-[var(--color-text-primary)]">Oat Milk</span>
+                        </div>
+                        <span class="text-sm font-semibold text-[var(--color-accent)]">+ Rp 8.000</span>
+                    </label>
+
+                    <!-- Almond Milk -->
+                    <label class="flex items-center justify-between p-4 rounded-lg bg-[var(--color-bg-tertiary)] bg-opacity-30 hover:bg-opacity-60 cursor-pointer mb-2 transition-all duration-300">
+                        <div class="flex items-center gap-3">
+                            <input 
+                                type="radio" 
+                                name="milk" 
+                                value="8000" 
+                                onchange="updatePrice()"
+                                class="w-5 h-5 accent-[var(--color-accent)] cursor-pointer">
+                            <span class="text-[var(--color-text-primary)]">Almond Milk</span>
+                        </div>
+                        <span class="text-sm font-semibold text-[var(--color-accent)]">+ Rp 8.000</span>
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- Order Action -->
+            <div class="p-6 space y-6 flex gap-2 items-center pt-2">
+                <!-- Quantity Control -->
+                <div class="flex items-center gap-2 bg-[var(--color-bg-tertiary)] bg-opacity-50 px-4 py-2 rounded-xl">
+                    <button onclick="changeQuantity(-1)"
+                    class="w-8 h-8 flex items-center justify-center rounded-lg border border-[var(--color-text-secondary)] hover:bg-[var(--color-accent-hover)] hover:border-[var(--color-accent-hover)] transition-all duration-300">
+                    <span class="material-icons-sharp text-[var(--color-text-primary)] text-[18px]">remove</span>
+                    </button>
+
+                    <span id="quantity" class="text-[18px] font-[var(--fw-semibold)] text-[var(--color-text-primary)] min-w-[40px] text-center">1</span>
+                    
+                    <button onclick="changeQuantity(1)"
+                    class="w-8 h-8 flex items-center justify-center rounded-lg border border-[var(--color-text-secondary)] hover:bg-[var(--color-accent-hover)] hover:border-[var(--color-accent-hover)] transition-all duration-300">
+                    <span class="material-icons-sharp text-[var(--color-text-primary)] text-[18px]">add</span>
+                    </button>
+                </div>
+
+                <!-- Add to Order -->
+                <button onclick="addToOrder()"
+                class="flex-1 flex items-center justify-center gap-3 py-3 px-4 rounded-xl bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] hover:-translate-y-0.5 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <span class="text-[var(--color-bg-primary)] font-[var(--fw-semibold)]">Add to Order</span>
+                <span id="totalPrice" class="text-[var(--color-bg-primary)] font-[var(--fw-bold)]">Rp 43.000</span>
+                </button>
+            </div>
+            
         </div>
 
     </div>
